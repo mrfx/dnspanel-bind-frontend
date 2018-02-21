@@ -1,0 +1,45 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="container">
+
+  <div class="well" style="margin-top:50px;">
+    <div>DNS PANEL by AGInternet.pl</div>
+    <div style="margin-top: 10px;" class="agi-menu" *ngIf="islogged">
+
+      <span class="pull-right">
+        <button
+                (click)="restartDNS()"
+                class="btn btn-sm btn-danger pointer">DNS Reload <span class="glyphicon glyphicon-refresh"></span> </button>&nbsp;
+
+        <ng-template #dnsInfoTemplate><div style="width: 300px;font-size: 10px; font-weight: bold;font-family: monospace;" [innerHtml]="DNScontent"></div></ng-template>
+        <button
+                [popover]="dnsInfoTemplate" popoverTitle="Ostatni restart DNS:" triggers="focus" placement="left"
+                class="btn btn-sm btn-primary pointer"> <span class="glyphicon glyphicon-info-sign"></span> </button>
+      </span>
+
+      <a class="btn-sm btn-default" (click)="wyloguj()"><span class="glyphicon glyphicon-log-out"></span>  Wyloguj</a>
+      <a class="btn-sm btn-primary" routerLink="/">Start</a>
+      <a class="btn-sm btn-primary" routerLink="/domeny">Lista domen</a>
+      <a class="btn-sm btn-primary" routerLink="/nowa-domena">Nowa domena <span class="glyphicon glyphicon-plus"></span> </a>
+
+    </div>
+  </div>
+
+
+  <router-outlet></router-outlet>
+
+
+
+  <div class="well text-right">
+
+    <span style="font-size: 11px;">
+      &copy; 2017 AGINTERNET.pl
+    </span>
+
+  </div>
+
+
+</div>
+
+
+

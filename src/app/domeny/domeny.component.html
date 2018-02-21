@@ -1,0 +1,61 @@
+
+
+
+
+<div class="row">
+
+  <div class="col-md-6">
+
+    <table class="table domeny table-hover table-striped table-responsive">
+      <thead>
+        <tr>
+          <th colspan="99">
+            <input type="text" [(ngModel)]="szukajAktywne" placeholder="szukaj..." class="input-sm form-control" (keyup)="filtrujAktywne();">
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let domena of domenyAktywnePokazane; let i = index">
+
+          <td>{{i}}</td>
+          <td><span class="badge">{{domena.id}}</span></td>
+          <td> <a routerLink="/detail/{{domena.id}}" class="btn-xs btn-success">{{domena.domena}}</a></td>
+
+        </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+
+  <div class="col-md-6">
+
+    <table class="table domeny table-hover table-striped table-responsive">
+      <thead>
+      <tr>
+        <th colspan="99">
+          <input type="text" [(ngModel)]="szukajNieaktywne" placeholder="szukaj..." class="input-sm form-control" (keyup)="filtrujNieaktywne();">
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let domena of domenyNieaktywnePokazane; let i = index">
+
+          <td>{{i}}</td>
+          <td><span class="badge">{{domena.id}}</span></td>
+          <td> <a routerLink="/detail/{{domena.id}}" class="btn-xs btn-danger">{{domena.domena}}</a></td>
+
+        </tr>
+      </tbody>
+    </table>
+
+
+
+  </div>
+
+
+</div>
+
+
+
+

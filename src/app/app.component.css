@@ -1,0 +1,11 @@
+
+
+.agi-menu a:link, .agi-menu a:visited {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.agi-menu a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
